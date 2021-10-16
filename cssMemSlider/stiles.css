@@ -19,12 +19,15 @@ body {
 }
 
 .wrapper {
+	display: flex;
+	flex-wrap: wrap;
 }
 
 ._bounding_container {
 	position: absolute;
-	margin-left: auto;
-	margin-right: auto;
+	top: 30%;
+	left:50%;
+	transform: translate(-50%, -50%);
 }
 
 .slider {
@@ -50,13 +53,22 @@ body {
 }
 
 .nav_text {
+	display: flex;
+	justify-content: space-between;
 }
 .text {
 }
+
+#text1, #text2, #text3, #text4 {
+	display: none;
+}
+
 .nav {
-	position: absolute;
+	margin-left: 60px;
+	position: relative;
 	display: flex;
 }
+
 .button {
 	height: 30px;
 	width: 30px;
@@ -70,11 +82,38 @@ input {
 	display: none;
 }
 
-#slide1:checked ~ .active {
+#slide1:checked ~ .slider .slides .active {
 	margin-left: 0;
 }
 
-#slide2:checked ~ .active {
+#slide1:checked ~ .nav_text .text #text1 {
+	display: block;
+}
+
+#slide2:checked ~ .slider .slides .active {
+	margin-left: -25%;
+}
+
+#slide2:checked ~ .nav_text .text #text2 {
+	display: block;
+}
+
+#slide3:checked ~ .slider .slides .active {
+	margin-left: -50%;
+}
+
+#slide3:checked ~ .nav_text .text #text3 {
+	display: block;
+}
+
+#slide4:checked ~ .slider .slides .active {
+	margin-left: -75%;
+}
+
+#slide4:checked ~ .nav_text .text #text4 {
+	display: block;
+}
+/* #slide2:checked ~ .active {
 	margin-left: -25%;
 }
 
@@ -84,5 +123,5 @@ input {
 
 #slide4:checked ~ .active {
 	margin-left: -75%;
-}
+} */
 

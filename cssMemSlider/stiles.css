@@ -1,3 +1,30 @@
+/* amatic-sc-regular - latin */
+@font-face {
+  font-family: 'Amatic SC';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/amatic-sc-v16-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('fonts/amatic-sc-v16-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/amatic-sc-v16-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/amatic-sc-v16-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('fonts/amatic-sc-v16-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('fonts/amatic-sc-v16-latin-regular.svg#AmaticSC') format('svg'); /* Legacy iOS */
+}
+/* amatic-sc-700 - latin */
+@font-face {
+  font-family: 'Amatic SC';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/amatic-sc-v16-latin-700.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('fonts/amatic-sc-v16-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/amatic-sc-v16-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/amatic-sc-v16-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('fonts/amatic-sc-v16-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('fonts/amatic-sc-v16-latin-700.svg#AmaticSC') format('svg'); /* Legacy iOS */
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -10,31 +37,34 @@ h1,h2,h3,h4,h5,h6 {
 html,body {
   height: 100%;
   line-height: 1;
-  font-size: 16px;
+	font-family: Amatic SC;
+	font-weight: 700;
+  font-size: 35px;
+	letter-spacing: 2px;
   scroll-behavior: smooth;
 }
 
 body {
-	background-color: khaki;
+	background: #a1d5b1;
 }
 
 .wrapper {
-	display: flex;
-	flex-wrap: wrap;
+ 
 }
 
 ._bounding_container {
 	position: absolute;
-	top: 30%;
-	left:50%;
+	top: 45%;
+	left: 50%;
 	transform: translate(-50%, -50%);
 }
 
 .slider {
-	width: 860px;
-	height: 500px;
+	width: 640px;
+	height: 480px;
 	overflow: hidden;
-	border-radius: 10px;
+	border: 10px double black;
+	border-radius: 30px;
 }
 
 .slides {
@@ -45,6 +75,7 @@ body {
 
 .slide {
 	width: 25%;
+	transition: all .1s .2s;
 }
 
 .slide img {
@@ -53,10 +84,12 @@ body {
 }
 
 .nav_text {
+	margin-top: 20px;
 	display: flex;
 	justify-content: space-between;
 }
 .text {
+	padding-left: 20px;
 }
 
 #text1, #text2, #text3, #text4 {
@@ -64,18 +97,56 @@ body {
 }
 
 .nav {
-	margin-left: 60px;
+	margin-right: 30px;
 	position: relative;
 	display: flex;
 }
 
-.button {
+
+.button1 {
+	margin-top: -35px;
+	cursor: pointer;
+	border: 30px solid transparent;
+	border-bottom: 40px solid #07e1ed;
+	margin-right: 10px;
+}
+
+.button2 {
 	height: 30px;
 	width: 30px;
+	background: #4944e8;
 	border: solid;
-	border-color: lightcoral;
+	border-color: black;
 	border-radius: 50%;
 	cursor: pointer;
+	margin-right: 10px;
+	margin-top: 20px;
+}
+
+.button3 {
+	height: 35px;
+	width: 35px;
+	background: #07f726;
+	border: solid;
+	border-color: black;
+	border-radius: 50%;
+	cursor: pointer;
+	margin-right: 10px;
+}
+
+.button4 {
+	height: 45px;
+	width: 45px;
+	background: #ff0056;
+	border: solid;
+	border-color: black;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+@keyframes appearance {
+	from { margin-left: 50px; }
+	to { margin-left: 0px; }
 }
 
 input {
@@ -87,6 +158,8 @@ input {
 }
 
 #slide1:checked ~ .nav_text .text #text1 {
+	animation-duration: .6s;
+  animation-name: appearance;
 	display: block;
 }
 
@@ -95,6 +168,8 @@ input {
 }
 
 #slide2:checked ~ .nav_text .text #text2 {
+	animation-duration: .6s;
+  animation-name: appearance;
 	display: block;
 }
 
@@ -103,6 +178,8 @@ input {
 }
 
 #slide3:checked ~ .nav_text .text #text3 {
+	animation-duration: .4s;
+  animation-name: appearance;
 	display: block;
 }
 
@@ -111,17 +188,8 @@ input {
 }
 
 #slide4:checked ~ .nav_text .text #text4 {
+	animation-duration: .4s;
+  animation-name: appearance;
 	display: block;
 }
-/* #slide2:checked ~ .active {
-	margin-left: -25%;
-}
-
-#slide3:checked ~ .active {
-	margin-left: -50%;
-}
-
-#slide4:checked ~ .active {
-	margin-left: -75%;
-} */
 

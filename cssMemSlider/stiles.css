@@ -111,6 +111,10 @@ body {
 	margin-right: 10px;
 }
 
+.button1:hover {
+	border-bottom: 40px solid #01adb6;
+}
+
 .button2 {
 	height: 30px;
 	width: 30px;
@@ -121,6 +125,10 @@ body {
 	cursor: pointer;
 	margin-right: 10px;
 	margin-top: 20px;
+}
+
+.button2:hover {
+	background: #5f5bda;
 }
 
 .button3 {
@@ -134,14 +142,22 @@ body {
 	margin-right: 10px;
 }
 
+.button3:hover {
+	background: #40ff5a;
+}
+
 .button4 {
 	height: 45px;
 	width: 45px;
-	background: #ff0056;
+	background: #aa023a;
 	border: solid;
 	border-color: black;
 	border-radius: 50%;
 	cursor: pointer;
+}
+
+.button4:hover {
+	background: #ff3779;
 }
 
 @keyframes appearance {
@@ -163,6 +179,10 @@ input {
 	display: block;
 }
 
+#slide1:checked ~ .nav_text .nav .button1 {
+	border-bottom: 40px solid #01adb6;
+}
+
 #slide2:checked ~ .slider .slides .active {
 	margin-left: -25%;
 }
@@ -171,6 +191,10 @@ input {
 	animation-duration: .6s;
   animation-name: appearance;
 	display: block;
+}
+
+#slide2:checked ~ .nav_text .nav .button2 {
+	background: #6f6bf0;
 }
 
 #slide3:checked ~ .slider .slides .active {
@@ -183,6 +207,10 @@ input {
 	display: block;
 }
 
+#slide3:checked ~ .nav_text .nav .button3 {
+	background: #40ff5a;
+}
+
 #slide4:checked ~ .slider .slides .active {
 	margin-left: -75%;
 }
@@ -191,5 +219,9 @@ input {
 	animation-duration: .4s;
   animation-name: appearance;
 	display: block;
+}
+
+#slide4:checked ~ .nav_text .nav .button4 {
+	background: #ff3779;
 }
 

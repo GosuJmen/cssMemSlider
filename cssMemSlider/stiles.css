@@ -107,6 +107,28 @@ body {
 	display: flex;
 	justify-content: space-between;
 }
+
+@media (max-width: 768px) {
+	.nav_text {
+		margin-top: 20px;
+		display: flex;
+		flex-direction: column-reverse;
+	}
+
+	.nav {
+		justify-content: center;
+		padding-bottom: 5px;
+	}
+
+	.text {
+		padding-top: 20px;
+	}
+	
+	.plus {
+		padding-top: 20px;
+	}
+}
+
 .text {
 	padding-left: 20px;
 }
@@ -151,8 +173,6 @@ body {
   border-right:solid 33px transparent;
   border-left:solid 33px transparent;
 }
-
-
 
 .button2 {
 	height: 30px;
@@ -259,15 +279,13 @@ body {
 	font-size: 45px;
 	color: red;
 	animation: shake 0.1s infinite;
-	
 }
 
 @media (max-width: 768px) {
 	#me {
-		font-size: 25px;
+		font-size: 20px;
 		color: red;
 		animation: shake 0.1s infinite;
-		
 	}
 }
 
@@ -345,4 +363,3 @@ input {
 	box-shadow: 0 0 10px rgba(100%, 22%, 47%, 0.6);
 	background: #ff3779;
 }
-

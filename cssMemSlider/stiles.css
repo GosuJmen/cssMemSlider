@@ -106,13 +106,13 @@ body {
 .button1 {
 	margin-top: -35px;
 	cursor: pointer;
-	border: 30px solid transparent;
-	border-bottom: 40px solid #07e1ed;
+	border: 40px solid transparent;
+	border-bottom: 50px solid #07e1ed;
 	margin-right: 10px;
 }
 
 .button1:hover {
-	border-bottom: 40px solid #01adb6;
+	border-bottom: 50px solid #01adb6;
 }
 
 .button2 {
@@ -123,7 +123,6 @@ body {
 	border-color: black;
 	border-radius: 50%;
 	cursor: pointer;
-	margin-right: 10px;
 	margin-top: 20px;
 }
 
@@ -147,13 +146,14 @@ body {
 }
 
 .button4 {
-	height: 45px;
-	width: 45px;
+	height: 55px;
+	width: 55px;
 	background: #aa023a;
 	border: solid;
 	border-color: black;
 	border-radius: 50%;
 	cursor: pointer;
+	margin-top: 30px;
 }
 
 .button4:hover {
@@ -163,6 +163,35 @@ body {
 @keyframes appearance {
 	from { margin-left: 50px; }
 	to { margin-left: 0px; }
+}
+
+@keyframes shake {
+  10% {
+    margin-top: 3px;
+		margin-right: 3px;
+  }
+  
+  30% {
+		margin-bottom: -3px;
+		margin-left: -3px;
+  }
+
+  70% {
+		margin-top: 3px;
+		margin-right: 3px;
+  }
+
+  90% {
+		margin-bottom: 3px;
+		margin-left: 3px;
+  }
+}
+
+#me {
+	font-size: 45px;
+	color: red;
+	animation: shake 0.1s infinite;
+	
 }
 
 input {
